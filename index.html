@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Scriptures & Stone</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cinzel:wght@400;600&family=EB+Garamond:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:        #f5f0e8;
+      --bg-card:   #faf7f2;
+      --ink:       #2a2318;
+      --ink-soft:  #5a5040;
+      --accent:    #3b6e52;
+      --accent2:   #7a5c2e;
+      --rule:      #c8bfa8;
+      --shadow:    rgba(42,35,24,0.10);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 19px;
+      line-height: 1.7;
+      min-height: 100vh;
+    }
+
+    /* ── HEADER ── */
+    header {
+      text-align: center;
+      padding: 72px 24px 48px;
+      border-bottom: 1px solid var(--rule);
+      position: relative;
+    }
+
+    .site-ornament {
+      font-size: 1.4rem;
+      color: var(--accent);
+      letter-spacing: 0.3em;
+      display: block;
+      margin-bottom: 12px;
+      opacity: 0;
+      animation: fadeUp 0.8s ease forwards 0.1s;
+    }
+
+    h1.site-title {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(2.2rem, 5vw, 3.8rem);
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      color: var(--ink);
+      line-height: 1.15;
+      opacity: 0;
+      animation: fadeUp 0.8s ease forwards 0.2s;
+    }
+
+    .site-tagline {
+      margin-top: 14px;
+      font-size: 1.05rem;
+      font-style: italic;
+      color: var(--ink-soft);
+      letter-spacing: 0.04em;
+      opacity: 0;
+      animation: fadeUp 0.8s ease forwards 0.35s;
+    }
+
+    .header-rule {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      margin-top: 32px;
+      opacity: 0;
+      animation: fadeUp 0.8s ease forwards 0.45s;
+    }
+    .header-rule span { height: 1px; width: 80px; background: var(--rule); display: block; }
+    .header-rule .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); display: block; }
+
+    /* ── NAV ── */
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      padding: 20px 24px;
+      border-bottom: 1px solid var(--rule);
+    }
+    nav a {
+      font-family: 'Cinzel', serif;
+      font-size: 0.78rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    nav a:hover { color: var(--accent); }
+
+    /* ── LAYOUT ── */
+    .container {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ── SECTION LABEL ── */
+    .section-label {
+      font-family: 'Cinzel', serif;
+      font-size: 0.7rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--accent2);
+      margin: 56px 0 32px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .section-label::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--rule);
+    }
+
+    /* ── POST CARD ── */
+    .post-card {
+      background: var(--bg-card);
+      border: 1px solid var(--rule);
+      border-radius: 2px;
+      padding: 36px 40px;
+      margin-bottom: 28px;
+      box-shadow: 0 2px 12px var(--shadow);
+      text-decoration: none;
+      display: block;
+      color: inherit;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    .post-card::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 0; bottom: 0;
+      width: 3px;
+      background: var(--accent);
+      transform: scaleY(0);
+      transition: transform 0.25s ease;
+      transform-origin: bottom;
+    }
+    .post-card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px var(--shadow); }
+    .post-card:hover::before { transform: scaleY(1); }
+
+    .post-epic {
+      font-family: 'Cinzel', serif;
+      font-size: 0.68rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 10px;
+    }
+
+    .post-title {
+      font-family: 'Cinzel', serif;
+      font-size: 1.55rem;
+      font-weight: 600;
+      line-height: 1.3;
+      color: var(--ink);
+      margin-bottom: 12px;
+    }
+
+    .post-excerpt {
+      font-size: 1rem;
+      color: var(--ink-soft);
+      font-style: italic;
+      line-height: 1.6;
+      margin-bottom: 18px;
+    }
+
+    .post-meta {
+      font-size: 0.82rem;
+      color: var(--rule);
+      font-family: 'Cinzel', serif;
+      letter-spacing: 0.08em;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .post-meta .sep { color: var(--accent2); }
+
+    /* ── FOOTER ── */
+    footer {
+      text-align: center;
+      padding: 48px 24px;
+      margin-top: 72px;
+      border-top: 1px solid var(--rule);
+      font-size: 0.85rem;
+      color: var(--rule);
+      font-style: italic;
+    }
+
+    /* ── ANIMATIONS ── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(18px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .post-card {
+      opacity: 0;
+      animation: fadeUp 0.7s ease forwards;
+    }
+    .post-card:nth-child(1) { animation-delay: 0.5s; }
+    .post-card:nth-child(2) { animation-delay: 0.65s; }
+    .post-card:nth-child(3) { animation-delay: 0.8s; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 560px) {
+      .post-card { padding: 24px 22px; }
+      h1.site-title { font-size: 2rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <span class="site-ornament">✦ &nbsp; ✦ &nbsp; ✦</span>
+    <h1 class="site-title">Scriptures &amp; Stone</h1>
+    <p class="site-tagline">Tales from the great epics — Ramayana &amp; Mahabharata</p>
+    <div class="header-rule">
+      <span></span><span class="dot"></span><span></span>
+    </div>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="#ramayana">Ramayana</a>
+    <a href="#mahabharata">Mahabharata</a>
+    <a href="#about">About</a>
+  </nav>
+
+  <main class="container">
+
+    <div class="section-label">Latest Stories</div>
+
+    <a href="posts/breaking-of-the-great-bow.html" class="post-card">
+      <div class="post-epic">Ramayana</div>
+      <div class="post-title">Breaking of the Great Bow</div>
+      <p class="post-excerpt">
+        In the court of Janaka, a challenge lay unanswered for years — the divine bow of Shiva, 
+        unmoved by the mightiest kings. Then a prince from Ayodhya stepped forward…
+      </p>
+      <div class="post-meta">
+        <span>March 2026</span>
+        <span class="sep">·</span>
+        <span>Swayamvara of Sita</span>
+      </div>
+    </a>
+
+    <!-- Add more post cards here following the same pattern -->
+
+  </main>
+
+  <footer>
+    <p>Scriptures &amp; Stone &nbsp;·&nbsp; Stories retold with devotion</p>
+  </footer>
+
+</body>
+</html>
