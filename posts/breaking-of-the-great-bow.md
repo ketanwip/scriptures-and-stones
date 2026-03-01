@@ -9,6 +9,9 @@ In the heart of the Kingdom of Mithila sat a chamber that smelled of ancient inc
 
 Resting in a massive chest of dark, hammered iron, the bow sat upon an eight-wheeled carriage. For generations, the kings of Mithila had protected it. Every morning, King Janaka would enter the chamber, viewing the weapon not as a prize, but as a divine responsibility.
 
+<img width="1024" height="572" alt="image" src="https://github.com/user-attachments/assets/724eec45-1663-4ab1-8cac-c02a6cbd55d6" />
+
+
 > "Five thousand men," Janaka whispered, watching guards strain to move the carriage for the ceremony. "Five thousand strong men just to nudge it. And yet, she moved it like a lotus flower."
 
 ## II. The Memory of the Flower
