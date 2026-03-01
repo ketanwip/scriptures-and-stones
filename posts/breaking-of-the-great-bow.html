@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Breaking of the Great Bow — Scriptures &amp; Stone</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cinzel:wght@400;600&family=EB+Garamond:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:        #f5f0e8;
+      --bg-card:   #faf7f2;
+      --ink:       #2a2318;
+      --ink-soft:  #5a5040;
+      --accent:    #3b6e52;
+      --accent2:   #7a5c2e;
+      --rule:      #c8bfa8;
+      --shadow:    rgba(42,35,24,0.10);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 20px;
+      line-height: 1.85;
+      min-height: 100vh;
+    }
+
+    /* ── HEADER ── */
+    header {
+      text-align: center;
+      padding: 40px 24px 32px;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    h1.site-title {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(1.4rem, 3vw, 2rem);
+      font-weight: 400;
+      letter-spacing: 0.08em;
+      color: var(--ink-soft);
+      text-decoration: none;
+    }
+    h1.site-title a { color: inherit; text-decoration: none; }
+    h1.site-title a:hover { color: var(--accent); }
+
+    /* ── NAV ── */
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      padding: 18px 24px;
+      border-bottom: 1px solid var(--rule);
+    }
+    nav a {
+      font-family: 'Cinzel', serif;
+      font-size: 0.78rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    nav a:hover { color: var(--accent); }
+
+    /* ── POST ── */
+    .post-wrapper {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 0 24px 80px;
+    }
+
+    .post-header {
+      text-align: center;
+      padding: 60px 0 48px;
+      border-bottom: 1px solid var(--rule);
+      margin-bottom: 52px;
+      opacity: 0;
+      animation: fadeUp 0.8s ease forwards 0.1s;
+    }
+
+    .post-epic {
+      font-family: 'Cinzel', serif;
+      font-size: 0.7rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 18px;
+    }
+
+    h2.post-title {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(1.8rem, 4vw, 2.9rem);
+      font-weight: 600;
+      line-height: 1.2;
+      color: var(--ink);
+      margin-bottom: 20px;
+    }
+
+    .post-meta {
+      font-size: 0.85rem;
+      color: var(--rule);
+      font-family: 'Cinzel', serif;
+      letter-spacing: 0.08em;
+    }
+    .post-meta .sep { color: var(--accent2); margin: 0 8px; }
+
+    .post-ornament {
+      margin-top: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+    }
+    .post-ornament span { height: 1px; width: 60px; background: var(--rule); display: block; }
+    .post-ornament .dot { width: 5px; height: 5px; border-radius: 50%; background: var(--accent); display: block; }
+
+    /* ── BODY TEXT ── */
+    .post-body {
+      opacity: 0;
+      animation: fadeUp 0.8s ease forwards 0.3s;
+    }
+
+    .post-body p {
+      margin-bottom: 1.6em;
+      font-size: 1.05rem;
+      color: var(--ink);
+    }
+
+    .post-body p.lead {
+      font-size: 1.2rem;
+      font-style: italic;
+      color: var(--ink-soft);
+      margin-bottom: 2em;
+    }
+
+    /* Drop cap on first paragraph */
+    .post-body p.drop-cap::first-letter {
+      font-family: 'Cinzel', serif;
+      font-size: 4.2rem;
+      font-weight: 600;
+      float: left;
+      line-height: 0.78;
+      margin-right: 8px;
+      margin-top: 10px;
+      color: var(--accent2);
+    }
+
+    .post-body blockquote {
+      margin: 2.4em 0;
+      padding: 20px 32px;
+      border-left: 3px solid var(--accent);
+      background: var(--bg-card);
+      font-style: italic;
+      color: var(--ink-soft);
+      font-size: 1.1rem;
+      line-height: 1.7;
+    }
+
+    .post-body h3 {
+      font-family: 'Cinzel', serif;
+      font-size: 1.1rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      color: var(--ink);
+      margin: 2.4em 0 0.8em;
+    }
+
+    /* ── END ORNAMENT ── */
+    .post-end {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      margin: 52px 0 48px;
+      color: var(--accent2);
+      font-family: 'Cinzel', serif;
+      font-size: 1rem;
+      letter-spacing: 0.2em;
+    }
+    .post-end span { height: 1px; width: 60px; background: var(--rule); display: block; }
+
+    /* ── BACK LINK ── */
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: 'Cinzel', serif;
+      font-size: 0.75rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--accent);
+      text-decoration: none;
+      border: 1px solid var(--accent);
+      padding: 10px 22px;
+      border-radius: 1px;
+      transition: background 0.2s, color 0.2s;
+    }
+    .back-link:hover { background: var(--accent); color: var(--bg); }
+
+    /* ── FOOTER ── */
+    footer {
+      text-align: center;
+      padding: 40px 24px;
+      border-top: 1px solid var(--rule);
+      font-size: 0.85rem;
+      color: var(--rule);
+      font-style: italic;
+    }
+
+    /* ── ANIMATIONS ── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(16px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 560px) {
+      h2.post-title { font-size: 1.7rem; }
+      .post-body p { font-size: 1rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1 class="site-title"><a href="../index.html">Scriptures &amp; Stone</a></h1>
+  </header>
+
+  <nav>
+    <a href="../index.html">Home</a>
+    <a href="#">Ramayana</a>
+    <a href="#">Mahabharata</a>
+    <a href="#">About</a>
+  </nav>
+
+  <div class="post-wrapper">
+
+    <div class="post-header">
+      <div class="post-epic">Ramayana · Bala Kanda</div>
+      <h2 class="post-title">Breaking of the Great Bow</h2>
+      <div class="post-meta">
+        <span>March 2026</span>
+        <span class="sep">·</span>
+        <span>The Swayamvara of Sita</span>
+      </div>
+      <div class="post-ornament">
+        <span></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span></span>
+      </div>
+    </div>
+
+    <div class="post-body">
+
+      <p class="lead">
+        In the court of Mithila, King Janaka had made a vow — his daughter Sita, 
+        born of the earth itself, would be given only to the man who could string 
+        the great bow of Shiva.
+      </p>
+
+      <p class="drop-cap">
+        <!-- ✏️ REPLACE THIS with your story text. This is a placeholder paragraph. 
+             You can write multiple paragraphs here, each wrapped in <p> tags. 
+             Use <blockquote> tags for poetic verses or important lines. 
+             Use <h3> tags for section headings within the story. -->
+        Your story goes here. Write as many paragraphs as you like. Each paragraph should 
+        be wrapped in opening and closing &lt;p&gt; tags like this one. You can have as many 
+        paragraphs as your story needs — the page will scroll beautifully.
+      </p>
+
+      <p>
+        Continue your story here in this second paragraph. The font, spacing, and layout 
+        are all set up to make long-form reading a comfortable, immersive experience.
+      </p>
+
+      <blockquote>
+        Add a verse, shloka translation, or a powerful line from the story here using the blockquote tag.
+      </blockquote>
+
+      <p>
+        Continue the story after the quote. You can add as many sections and paragraphs as you need.
+        Use the &lt;h3&gt; tag below if you want a section title within your story.
+      </p>
+
+      <h3>A Turning Point</h3>
+
+      <p>
+        Use &lt;h3&gt; headings to break longer stories into named sections. 
+        Delete this section if you don't need it.
+      </p>
+
+    </div>
+
+    <div class="post-end">
+      <span></span> ✦ <span></span>
+    </div>
+
+    <a href="../index.html" class="back-link">← All Stories</a>
+
+  </div>
+
+  <footer>
+    <p>Scriptures &amp; Stone &nbsp;·&nbsp; Stories retold with devotion</p>
+  </footer>
+
+</body>
+</html>
