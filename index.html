@@ -3,21 +3,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Scriptures & Stone</title>
+  <title>Scriptures &amp; Stone</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cinzel:wght@400;600&family=EB+Garamond:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cinzel:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/9.1.6/marked.min.js"></script>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --bg:        #f5f0e8;
-      --bg-card:   #faf7f2;
-      --ink:       #2a2318;
-      --ink-soft:  #5a5040;
-      --accent:    #3b6e52;
-      --accent2:   #7a5c2e;
-      --rule:      #c8bfa8;
-      --shadow:    rgba(42,35,24,0.10);
+      --bg:       #f5f0e8;
+      --bg-card:  #faf7f2;
+      --ink:      #2a2318;
+      --ink-soft: #5a5040;
+      --accent:   #3b6e52;
+      --accent2:  #7a5c2e;
+      --rule:     #c8bfa8;
+      --shadow:   rgba(42,35,24,0.10);
     }
 
     html { scroll-behavior: smooth; }
@@ -27,200 +28,206 @@
       color: var(--ink);
       font-family: 'Cormorant Garamond', Georgia, serif;
       font-size: 19px;
-      line-height: 1.7;
+      line-height: 1.8;
       min-height: 100vh;
     }
 
     /* ── HEADER ── */
     header {
       text-align: center;
-      padding: 72px 24px 48px;
+      padding: 64px 24px 44px;
       border-bottom: 1px solid var(--rule);
-      position: relative;
     }
-
     .site-ornament {
-      font-size: 1.4rem;
-      color: var(--accent);
-      letter-spacing: 0.3em;
-      display: block;
-      margin-bottom: 12px;
-      opacity: 0;
-      animation: fadeUp 0.8s ease forwards 0.1s;
+      font-size: 1.2rem; color: var(--accent);
+      letter-spacing: 0.3em; display: block; margin-bottom: 14px;
+      opacity: 0; animation: fadeUp 0.8s ease forwards 0.1s;
     }
-
     h1.site-title {
       font-family: 'Cinzel', serif;
-      font-size: clamp(2.2rem, 5vw, 3.8rem);
-      font-weight: 600;
-      letter-spacing: 0.05em;
-      color: var(--ink);
-      line-height: 1.15;
-      opacity: 0;
-      animation: fadeUp 0.8s ease forwards 0.2s;
+      font-size: clamp(2rem, 5vw, 3.6rem);
+      font-weight: 600; letter-spacing: 0.05em; color: var(--ink);
+      cursor: pointer; opacity: 0; animation: fadeUp 0.8s ease forwards 0.2s;
+      transition: color 0.2s;
     }
-
+    h1.site-title:hover { color: var(--accent); }
     .site-tagline {
-      margin-top: 14px;
-      font-size: 1.05rem;
-      font-style: italic;
-      color: var(--ink-soft);
-      letter-spacing: 0.04em;
-      opacity: 0;
-      animation: fadeUp 0.8s ease forwards 0.35s;
+      margin-top: 12px; font-size: 1rem; font-style: italic;
+      color: var(--ink-soft); letter-spacing: 0.04em;
+      opacity: 0; animation: fadeUp 0.8s ease forwards 0.3s;
     }
-
     .header-rule {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 16px;
-      margin-top: 32px;
-      opacity: 0;
-      animation: fadeUp 0.8s ease forwards 0.45s;
+      display: flex; align-items: center; justify-content: center;
+      gap: 14px; margin-top: 28px;
+      opacity: 0; animation: fadeUp 0.8s ease forwards 0.4s;
     }
-    .header-rule span { height: 1px; width: 80px; background: var(--rule); display: block; }
-    .header-rule .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); display: block; }
+    .header-rule .line { height: 1px; width: 70px; background: var(--rule); }
+    .header-rule .dot  { width: 5px; height: 5px; border-radius: 50%; background: var(--accent); }
 
     /* ── NAV ── */
     nav {
-      display: flex;
-      justify-content: center;
-      gap: 40px;
-      padding: 20px 24px;
-      border-bottom: 1px solid var(--rule);
+      display: flex; justify-content: center; gap: 40px;
+      padding: 18px 24px; border-bottom: 1px solid var(--rule);
     }
     nav a {
-      font-family: 'Cinzel', serif;
-      font-size: 0.78rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--ink-soft);
-      text-decoration: none;
-      transition: color 0.2s;
+      font-family: 'Cinzel', serif; font-size: 0.76rem;
+      letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--ink-soft); text-decoration: none; transition: color 0.2s;
     }
     nav a:hover { color: var(--accent); }
 
-    /* ── LAYOUT ── */
-    .container {
-      max-width: 780px;
-      margin: 0 auto;
-      padding: 0 24px;
-    }
+    /* ── VIEWS ── */
+    #home-view, #post-view { display: none; }
+    #home-view.active, #post-view.active { display: block; }
 
-    /* ── SECTION LABEL ── */
+    /* ── HOME ── */
+    .container { max-width: 780px; margin: 0 auto; padding: 0 24px; }
+
     .section-label {
-      font-family: 'Cinzel', serif;
-      font-size: 0.7rem;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      color: var(--accent2);
-      margin: 56px 0 32px;
-      display: flex;
-      align-items: center;
-      gap: 16px;
+      font-family: 'Cinzel', serif; font-size: 0.68rem;
+      letter-spacing: 0.22em; text-transform: uppercase;
+      color: var(--accent2); margin: 52px 0 28px;
+      display: flex; align-items: center; gap: 16px;
     }
-    .section-label::after {
-      content: '';
-      flex: 1;
-      height: 1px;
-      background: var(--rule);
-    }
+    .section-label::after { content: ''; flex: 1; height: 1px; background: var(--rule); }
 
-    /* ── POST CARD ── */
     .post-card {
-      background: var(--bg-card);
-      border: 1px solid var(--rule);
-      border-radius: 2px;
-      padding: 36px 40px;
-      margin-bottom: 28px;
-      box-shadow: 0 2px 12px var(--shadow);
-      text-decoration: none;
-      display: block;
-      color: inherit;
+      background: var(--bg-card); border: 1px solid var(--rule);
+      border-radius: 2px; padding: 32px 38px; margin-bottom: 24px;
+      box-shadow: 0 2px 10px var(--shadow); cursor: pointer;
       transition: transform 0.2s ease, box-shadow 0.2s ease;
-      position: relative;
-      overflow: hidden;
+      position: relative; overflow: hidden;
+      opacity: 0; animation: fadeUp 0.7s ease forwards;
     }
     .post-card::before {
-      content: '';
-      position: absolute;
-      left: 0; top: 0; bottom: 0;
-      width: 3px;
-      background: var(--accent);
-      transform: scaleY(0);
-      transition: transform 0.25s ease;
-      transform-origin: bottom;
+      content: ''; position: absolute; left: 0; top: 0; bottom: 0;
+      width: 3px; background: var(--accent);
+      transform: scaleY(0); transition: transform 0.25s ease; transform-origin: bottom;
     }
-    .post-card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px var(--shadow); }
+    .post-card:hover { transform: translateY(-3px); box-shadow: 0 8px 22px var(--shadow); }
     .post-card:hover::before { transform: scaleY(1); }
 
-    .post-epic {
+    .card-epic {
+      font-family: 'Cinzel', serif; font-size: 0.66rem;
+      letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--accent); margin-bottom: 8px;
+    }
+    .card-title {
+      font-family: 'Cinzel', serif; font-size: 1.5rem;
+      font-weight: 600; line-height: 1.3; color: var(--ink); margin-bottom: 10px;
+    }
+    .card-excerpt {
+      font-size: 0.98rem; color: var(--ink-soft); font-style: italic;
+      line-height: 1.6; margin-bottom: 16px;
+      display: -webkit-box; -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical; overflow: hidden;
+    }
+    .card-meta {
+      font-size: 0.8rem; color: var(--rule);
+      font-family: 'Cinzel', serif; letter-spacing: 0.08em;
+    }
+
+    /* ── POST VIEW ── */
+    .post-wrapper { max-width: 680px; margin: 0 auto; padding: 0 24px 80px; }
+
+    .post-header {
+      text-align: center; padding: 56px 0 44px;
+      border-bottom: 1px solid var(--rule); margin-bottom: 48px;
+      opacity: 0; animation: fadeUp 0.8s ease forwards 0.1s;
+    }
+    .post-epic-label {
+      font-family: 'Cinzel', serif; font-size: 0.68rem;
+      letter-spacing: 0.22em; text-transform: uppercase;
+      color: var(--accent); margin-bottom: 16px;
+    }
+    .post-title-heading {
       font-family: 'Cinzel', serif;
-      font-size: 0.68rem;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 10px;
+      font-size: clamp(1.7rem, 4vw, 2.8rem);
+      font-weight: 600; line-height: 1.2; color: var(--ink); margin-bottom: 18px;
+    }
+    .post-date {
+      font-size: 0.82rem; color: var(--rule);
+      font-family: 'Cinzel', serif; letter-spacing: 0.08em;
+    }
+    .post-ornament {
+      display: flex; align-items: center; justify-content: center;
+      gap: 12px; margin-top: 26px;
+    }
+    .post-ornament .line { height: 1px; width: 55px; background: var(--rule); }
+    .post-ornament .dot  { width: 5px; height: 5px; border-radius: 50%; background: var(--accent); }
+
+    /* ── RENDERED MARKDOWN ── */
+    #post-content {
+      opacity: 0; animation: fadeUp 0.8s ease forwards 0.3s;
+    }
+    #post-content p {
+      margin-bottom: 1.6em; font-size: 1.05rem; color: var(--ink);
+    }
+    #post-content p:first-of-type::first-letter {
+      font-family: 'Cinzel', serif; font-size: 4rem; font-weight: 600;
+      float: left; line-height: 0.78; margin-right: 8px; margin-top: 10px;
+      color: var(--accent2);
+    }
+    #post-content h2 {
+      font-family: 'Cinzel', serif; font-size: 1.3rem; font-weight: 600;
+      letter-spacing: 0.05em; color: var(--ink); margin: 2.4em 0 0.8em;
+    }
+    #post-content h3 {
+      font-family: 'Cinzel', serif; font-size: 1.05rem; font-weight: 600;
+      letter-spacing: 0.06em; color: var(--ink-soft); margin: 2em 0 0.6em;
+    }
+    #post-content blockquote {
+      margin: 2.2em 0; padding: 18px 28px;
+      border-left: 3px solid var(--accent); background: var(--bg-card);
+      font-style: italic; color: var(--ink-soft); font-size: 1.08rem; line-height: 1.7;
+    }
+    #post-content blockquote p { margin-bottom: 0; font-size: inherit; }
+    #post-content blockquote p::first-letter { all: unset; }
+    #post-content strong { font-weight: 600; color: var(--ink); }
+    #post-content hr {
+      border: none; border-top: 1px solid var(--rule);
+      margin: 2.4em auto; width: 60%;
     }
 
-    .post-title {
-      font-family: 'Cinzel', serif;
-      font-size: 1.55rem;
-      font-weight: 600;
-      line-height: 1.3;
-      color: var(--ink);
-      margin-bottom: 12px;
+    .post-end {
+      display: flex; align-items: center; justify-content: center;
+      gap: 14px; margin: 48px 0 40px;
+      color: var(--accent2); font-family: 'Cinzel', serif;
+      font-size: 1rem; letter-spacing: 0.2em;
+    }
+    .post-end .line { height: 1px; width: 55px; background: var(--rule); }
+
+    .back-btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-family: 'Cinzel', serif; font-size: 0.74rem;
+      letter-spacing: 0.16em; text-transform: uppercase;
+      color: var(--accent); border: 1px solid var(--accent);
+      padding: 10px 22px; border-radius: 1px;
+      cursor: pointer; background: none;
+      transition: background 0.2s, color 0.2s;
+    }
+    .back-btn:hover { background: var(--accent); color: var(--bg); }
+
+    .loading {
+      text-align: center; padding: 60px 24px;
+      font-style: italic; color: var(--ink-soft); font-size: 1rem;
     }
 
-    .post-excerpt {
-      font-size: 1rem;
-      color: var(--ink-soft);
-      font-style: italic;
-      line-height: 1.6;
-      margin-bottom: 18px;
-    }
-
-    .post-meta {
-      font-size: 0.82rem;
-      color: var(--rule);
-      font-family: 'Cinzel', serif;
-      letter-spacing: 0.08em;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-    .post-meta .sep { color: var(--accent2); }
-
-    /* ── FOOTER ── */
     footer {
-      text-align: center;
-      padding: 48px 24px;
-      margin-top: 72px;
+      text-align: center; padding: 44px 24px;
       border-top: 1px solid var(--rule);
-      font-size: 0.85rem;
-      color: var(--rule);
-      font-style: italic;
+      font-size: 0.85rem; color: var(--rule); font-style: italic; margin-top: 20px;
     }
 
-    /* ── ANIMATIONS ── */
     @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(18px); }
+      from { opacity: 0; transform: translateY(16px); }
       to   { opacity: 1; transform: translateY(0); }
     }
 
-    .post-card {
-      opacity: 0;
-      animation: fadeUp 0.7s ease forwards;
-    }
-    .post-card:nth-child(1) { animation-delay: 0.5s; }
-    .post-card:nth-child(2) { animation-delay: 0.65s; }
-    .post-card:nth-child(3) { animation-delay: 0.8s; }
-
-    /* ── RESPONSIVE ── */
     @media (max-width: 560px) {
-      .post-card { padding: 24px 22px; }
-      h1.site-title { font-size: 2rem; }
+      .post-card { padding: 22px 20px; }
+      .card-title { font-size: 1.2rem; }
+      nav { gap: 20px; }
     }
   </style>
 </head>
@@ -228,45 +235,152 @@
 
   <header>
     <span class="site-ornament">✦ &nbsp; ✦ &nbsp; ✦</span>
-    <h1 class="site-title">Scriptures &amp; Stone</h1>
+    <h1 class="site-title" onclick="showHome()">Scriptures &amp; Stone</h1>
     <p class="site-tagline">Tales from the great epics — Ramayana &amp; Mahabharata</p>
     <div class="header-rule">
-      <span></span><span class="dot"></span><span></span>
+      <span class="line"></span><span class="dot"></span><span class="line"></span>
     </div>
   </header>
 
   <nav>
-    <a href="index.html">Home</a>
-    <a href="#ramayana">Ramayana</a>
-    <a href="#mahabharata">Mahabharata</a>
-    <a href="#about">About</a>
+    <a href="#" onclick="showHome(); return false;">Home</a>
+    <a href="#" onclick="filterEpic('Ramayana'); return false;">Ramayana</a>
+    <a href="#" onclick="filterEpic('Mahabharata'); return false;">Mahabharata</a>
   </nav>
 
-  <main class="container">
+  <!-- HOME VIEW -->
+  <div id="home-view" class="active">
+    <div class="container">
+      <div class="section-label" id="section-label">All Stories</div>
+      <div id="post-list"></div>
+    </div>
+  </div>
 
-    <div class="section-label">Latest Stories</div>
-
-    <a href="posts/breaking-of-the-great-bow.html" class="post-card">
-      <div class="post-epic">Ramayana</div>
-      <div class="post-title">Breaking of the Great Bow</div>
-      <p class="post-excerpt">
-        In the court of Janaka, a challenge lay unanswered for years — the divine bow of Shiva, 
-        unmoved by the mightiest kings. Then a prince from Ayodhya stepped forward…
-      </p>
-      <div class="post-meta">
-        <span>March 2026</span>
-        <span class="sep">·</span>
-        <span>Swayamvara of Sita</span>
+  <!-- POST VIEW -->
+  <div id="post-view">
+    <div class="post-wrapper">
+      <div class="post-header">
+        <div class="post-epic-label" id="post-epic-label"></div>
+        <h2 class="post-title-heading" id="post-title-heading"></h2>
+        <div class="post-date" id="post-date"></div>
+        <div class="post-ornament">
+          <span class="line"></span>
+          <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+          <span class="line"></span>
+        </div>
       </div>
-    </a>
-
-    <!-- Add more post cards here following the same pattern -->
-
-  </main>
+      <div id="post-content"></div>
+      <div class="post-end">
+        <span class="line"></span> ✦ <span class="line"></span>
+      </div>
+      <button class="back-btn" onclick="showHome()">← All Stories</button>
+    </div>
+  </div>
 
   <footer>
     <p>Scriptures &amp; Stone &nbsp;·&nbsp; Stories retold with devotion</p>
   </footer>
+
+  <script>
+    // ═══════════════════════════════════════════════════════
+    //  ADD YOUR STORIES HERE
+    //  To add a new post:
+    //  1. Write your story as a .md file and put it in posts/
+    //  2. Copy one of the entries below and fill in the details
+    // ═══════════════════════════════════════════════════════
+    const POSTS = [
+      {
+        file:    "breaking-of-the-great-bow.md",
+        title:   "Breaking of the Great Bow",
+        epic:    "Ramayana",
+        excerpt: "In the court of Janaka, a challenge lay unanswered for years — the divine bow of Shiva, unmoved by the mightiest kings. Then a prince from Ayodhya stepped forward…",
+        date:    "March 2026"
+      },
+      // ── PASTE NEW ENTRIES BELOW THIS LINE ──
+      // {
+      //   file:    "your-filename.md",
+      //   title:   "Story Title",
+      //   epic:    "Mahabharata",
+      //   excerpt: "A one-line teaser shown on the home page.",
+      //   date:    "March 2026"
+      // },
+    ];
+
+    let currentFilter = null;
+
+    function showHome() {
+      document.getElementById('home-view').classList.add('active');
+      document.getElementById('post-view').classList.remove('active');
+      currentFilter = null;
+      renderPostList(null);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function filterEpic(epic) {
+      currentFilter = epic;
+      document.getElementById('home-view').classList.add('active');
+      document.getElementById('post-view').classList.remove('active');
+      renderPostList(epic);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function renderPostList(filter) {
+      const list = document.getElementById('post-list');
+      const label = document.getElementById('section-label');
+      const filtered = filter ? POSTS.filter(p => p.epic === filter) : POSTS;
+      label.textContent = filter ? filter + ' Stories' : 'All Stories';
+      list.innerHTML = filtered.map((post, i) => {
+        const idx = POSTS.indexOf(post);
+        return `
+          <div class="post-card" onclick="loadPost(${idx})" style="animation-delay:${0.35 + i * 0.12}s">
+            <div class="card-epic">${post.epic}</div>
+            <div class="card-title">${post.title}</div>
+            <div class="card-excerpt">${post.excerpt}</div>
+            <div class="card-meta">${post.date}</div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    async function loadPost(index) {
+      const post = POSTS[index];
+
+      document.getElementById('home-view').classList.remove('active');
+      document.getElementById('post-view').classList.add('active');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+
+      document.getElementById('post-epic-label').textContent = post.epic;
+      document.getElementById('post-title-heading').textContent = post.title;
+      document.getElementById('post-date').textContent = post.date;
+      document.getElementById('post-content').innerHTML = '<div class="loading">Loading story…</div>';
+
+      // Re-trigger animations
+      const header = document.querySelector('.post-header');
+      const content = document.getElementById('post-content');
+      header.style.animation = 'none'; content.style.animation = 'none';
+      void header.offsetHeight;
+      header.style.animation = ''; content.style.animation = '';
+
+      try {
+        const res = await fetch(`posts/${post.file}`);
+        if (!res.ok) throw new Error('File not found');
+        const md = await res.text();
+        // Strip leading H1 if present (title already shown in header)
+        const cleaned = md.replace(/^#[^\n]*\n/, '').trim();
+        content.innerHTML = marked.parse(cleaned);
+      } catch (e) {
+        content.innerHTML = `
+          <p style="color:var(--ink-soft);font-style:italic;">
+            Could not load story. Make sure 
+            <code style="font-family:monospace;font-size:0.9em">posts/${post.file}</code> 
+            exists in your repository.
+          </p>`;
+      }
+    }
+
+    // Boot
+    renderPostList(null);
+  </script>
 
 </body>
 </html>
