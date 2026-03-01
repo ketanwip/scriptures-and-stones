@@ -32,7 +32,6 @@
       min-height: 100vh;
     }
 
-    /* ── HEADER ── */
     header {
       text-align: center;
       padding: 64px 24px 44px;
@@ -64,7 +63,6 @@
     .header-rule .line { height: 1px; width: 70px; background: var(--rule); }
     .header-rule .dot  { width: 5px; height: 5px; border-radius: 50%; background: var(--accent); }
 
-    /* ── NAV ── */
     nav {
       display: flex; justify-content: center; gap: 40px;
       padding: 18px 24px; border-bottom: 1px solid var(--rule);
@@ -76,11 +74,9 @@
     }
     nav a:hover { color: var(--accent); }
 
-    /* ── VIEWS ── */
     #home-view, #post-view { display: none; }
     #home-view.active, #post-view.active { display: block; }
 
-    /* ── HOME ── */
     .container { max-width: 780px; margin: 0 auto; padding: 0 24px; }
 
     .section-label {
@@ -106,7 +102,6 @@
     }
     .post-card:hover { transform: translateY(-3px); box-shadow: 0 8px 22px var(--shadow); }
     .post-card:hover::before { transform: scaleY(1); }
-
     .card-epic {
       font-family: 'Cinzel', serif; font-size: 0.66rem;
       letter-spacing: 0.2em; text-transform: uppercase;
@@ -127,9 +122,7 @@
       font-family: 'Cinzel', serif; letter-spacing: 0.08em;
     }
 
-    /* ── POST VIEW ── */
     .post-wrapper { max-width: 680px; margin: 0 auto; padding: 0 24px 80px; }
-
     .post-header {
       text-align: center; padding: 56px 0 44px;
       border-bottom: 1px solid var(--rule); margin-bottom: 48px;
@@ -156,13 +149,8 @@
     .post-ornament .line { height: 1px; width: 55px; background: var(--rule); }
     .post-ornament .dot  { width: 5px; height: 5px; border-radius: 50%; background: var(--accent); }
 
-    /* ── RENDERED MARKDOWN ── */
-    #post-content {
-      opacity: 0; animation: fadeUp 0.8s ease forwards 0.3s;
-    }
-    #post-content p {
-      margin-bottom: 1.6em; font-size: 1.05rem; color: var(--ink);
-    }
+    #post-content { opacity: 0; animation: fadeUp 0.8s ease forwards 0.3s; }
+    #post-content p { margin-bottom: 1.6em; font-size: 1.05rem; color: var(--ink); }
     #post-content p:first-of-type::first-letter {
       font-family: 'Cinzel', serif; font-size: 4rem; font-weight: 600;
       float: left; line-height: 0.78; margin-right: 8px; margin-top: 10px;
@@ -184,10 +172,7 @@
     #post-content blockquote p { margin-bottom: 0; font-size: inherit; }
     #post-content blockquote p::first-letter { all: unset; }
     #post-content strong { font-weight: 600; color: var(--ink); }
-    #post-content hr {
-      border: none; border-top: 1px solid var(--rule);
-      margin: 2.4em auto; width: 60%;
-    }
+    #post-content hr { border: none; border-top: 1px solid var(--rule); margin: 2.4em auto; width: 60%; }
 
     .post-end {
       display: flex; align-items: center; justify-content: center;
@@ -248,7 +233,6 @@
     <a href="#" onclick="filterEpic('Mahabharata'); return false;">Mahabharata</a>
   </nav>
 
-  <!-- HOME VIEW -->
   <div id="home-view" class="active">
     <div class="container">
       <div class="section-label" id="section-label">All Stories</div>
@@ -256,7 +240,6 @@
     </div>
   </div>
 
-  <!-- POST VIEW -->
   <div id="post-view">
     <div class="post-wrapper">
       <div class="post-header">
@@ -282,31 +265,22 @@
   </footer>
 
   <script>
-    // ═══════════════════════════════════════════════════════
-    //  ADD YOUR STORIES HERE
-    //  To add a new post:
-    //  1. Write your story as a .md file and put it in posts/
-    //  2. Copy one of the entries below and fill in the details
-    // ═══════════════════════════════════════════════════════
-    const POSTS = [
-      {
-        file:    "breaking-of-the-great-bow.md",
-        title:   "Breaking of the Great Bow",
-        epic:    "Ramayana",
-        excerpt: "In the court of Janaka, a challenge lay unanswered for years — the divine bow of Shiva, unmoved by the mightiest kings. Then a prince from Ayodhya stepped forward…",
-        date:    "March 2026"
-      },
-      // ── PASTE NEW ENTRIES BELOW THIS LINE ──
-      // {
-      //   file:    "your-filename.md",
-      //   title:   "Story Title",
-      //   epic:    "Mahabharata",
-      //   excerpt: "A one-line teaser shown on the home page.",
-      //   date:    "March 2026"
-      // },
-    ];
-
+    let POSTS = [];
     let currentFilter = null;
+
+    // ── Boot: load posts.json, then render home ──
+    async function init() {
+      try {
+        const res = await fetch('posts.json');
+        if (!res.ok) throw new Error();
+        POSTS = await res.json();
+      } catch (e) {
+        document.getElementById('post-list').innerHTML =
+          '<p class="loading">Could not load posts.json. Make sure the file exists in your repository root.</p>';
+        return;
+      }
+      renderPostList(null);
+    }
 
     function showHome() {
       document.getElementById('home-view').classList.add('active');
@@ -325,7 +299,7 @@
     }
 
     function renderPostList(filter) {
-      const list = document.getElementById('post-list');
+      const list  = document.getElementById('post-list');
       const label = document.getElementById('section-label');
       const filtered = filter ? POSTS.filter(p => p.epic === filter) : POSTS;
       label.textContent = filter ? filter + ' Stories' : 'All Stories';
@@ -337,49 +311,50 @@
             <div class="card-title">${post.title}</div>
             <div class="card-excerpt">${post.excerpt}</div>
             <div class="card-meta">${post.date}</div>
-          </div>
-        `;
+          </div>`;
       }).join('');
     }
 
     async function loadPost(index) {
       const post = POSTS[index];
-
       document.getElementById('home-view').classList.remove('active');
       document.getElementById('post-view').classList.add('active');
       window.scrollTo({ top: 0, behavior: 'smooth' });
 
-      document.getElementById('post-epic-label').textContent = post.epic;
+      document.getElementById('post-epic-label').textContent  = post.epic;
       document.getElementById('post-title-heading').textContent = post.title;
-      document.getElementById('post-date').textContent = post.date;
-      document.getElementById('post-content').innerHTML = '<div class="loading">Loading story…</div>';
+      document.getElementById('post-date').textContent        = post.date;
 
-      // Re-trigger animations
-      const header = document.querySelector('.post-header');
       const content = document.getElementById('post-content');
-      header.style.animation = 'none'; content.style.animation = 'none';
+      const header  = document.querySelector('.post-header');
+      content.innerHTML = '<div class="loading">Loading story…</div>';
+
+      // Re-trigger CSS animations
+      header.style.animation  = 'none';
+      content.style.animation = 'none';
       void header.offsetHeight;
-      header.style.animation = ''; content.style.animation = '';
+      header.style.animation  = '';
+      content.style.animation = '';
 
       try {
         const res = await fetch(`posts/${post.file}`);
-        if (!res.ok) throw new Error('File not found');
-        const md = await res.text();
+        if (!res.ok) throw new Error();
+        let md = await res.text();
+
+        // Strip YAML frontmatter (--- ... ---) if present
+        md = md.replace(/^---[\s\S]*?---\n?/, '').trim();
         // Strip leading H1 if present (title already shown in header)
-        const cleaned = md.replace(/^#[^\n]*\n/, '').trim();
-        content.innerHTML = marked.parse(cleaned);
+        md = md.replace(/^#\s+[^\n]*\n?/, '').trim();
+
+        content.innerHTML = marked.parse(md);
       } catch (e) {
-        content.innerHTML = `
-          <p style="color:var(--ink-soft);font-style:italic;">
-            Could not load story. Make sure 
-            <code style="font-family:monospace;font-size:0.9em">posts/${post.file}</code> 
-            exists in your repository.
-          </p>`;
+        content.innerHTML = `<p style="color:var(--ink-soft);font-style:italic;">
+          Could not load <code style="font-family:monospace">posts/${post.file}</code>.
+          Make sure the file exists in your repository.</p>`;
       }
     }
 
-    // Boot
-    renderPostList(null);
+    init();
   </script>
 
 </body>
