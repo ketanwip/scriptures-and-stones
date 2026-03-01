@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "The Thunder of Mithila: The Breaking of the Great Bow"
 description: "How Prince Rama shattered the celestial bow of Lord Shiva to win the hand of Sita."
 source: "Valmiki Ramayana (Bala Kanda) & Ramacharitmanas"
