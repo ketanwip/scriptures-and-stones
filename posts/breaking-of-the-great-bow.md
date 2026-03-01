@@ -9,8 +9,6 @@ In the heart of the Kingdom of Mithila sat a chamber that smelled of ancient inc
 
 Resting in a massive chest of dark, hammered iron, the bow sat upon an eight-wheeled carriage. For generations, the kings of Mithila had protected it. Every morning, King Janaka would enter the chamber, viewing the weapon not as a prize, but as a divine responsibility.
 
-![image](../images/breaking-bow-1.png)
-
 > "Five thousand men," Janaka whispered, watching guards strain to move the carriage for the ceremony. "Five thousand strong men just to nudge it. And yet, she moved it like a lotus flower."
 
 ## II. The Memory of the Flower
@@ -22,8 +20,6 @@ The carriage, which required teams of elephants to move, had glided across the s
 ## III. The Gathering of Giants
 
 The day of the *Swayamvar* arrived. Kings from across the world had come, wearing armor of polished gold and speaking with voices like thunder. Janaka stood before them, his face like a mask of carved stone.
-
-![image](../images/breaking-bow-2.png)
 
 "The test is simple," Janaka's voice rang out. "Behold the Pinaka. He who can lift it, bend it, and string it shall be the husband of Sita."
 
