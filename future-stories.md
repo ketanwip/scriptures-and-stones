@@ -1,7 +1,13 @@
 ## From the Ramayana (Valmiki)
+The Legend of King Sagara: The ancestors of Rama and the digging of the ocean.
+
+The Ashvamedha of Sagara: The lost horse and the 60,000 sons turned to ash.
+
 The Descent of Ganga: Bhagiratha’s arduous penance to purify his ancestors.
 
 The Churning of the Ocean (Samudra Manthan): The quest for Amrita and the emergence of Halahala.
+
+The Vow of Diti: The birth of the Maruts (Storm Gods).
 
 The Curse of Ahalya: Redemption through the touch of Rama’s feet.
 
@@ -9,17 +15,65 @@ The Sacrifice of Rishyasringa: The unique yagya performed for the birth of Dasar
 
 Vishwamitra’s Transformation: The journey from a King (Rajarshi) to a Brahmarshi.
 
+The Slaying of Tataka: Rama’s first battle against the darkness.
+
+The Protection of Siddhashrama: Defending Vishwamitra’s sacrifice from Maricha and Subahu.
+
 The Tale of Sunahshepa: A story of sacrifice and divine intervention.
 
+The Wisdom of Sutikshna: A disciple’s unwavering meditation.
+
+The Agastya Gita: Receiving the divine weapons from the great Sage Agastya.
+
 Hanuman’s Leap: The crossing of the ocean and the encounter with Mainaka and Surasa.
+
+The Cave of Swayamprabha: The encounter with the ascetic woman in the magical cavern.
+
+The Humbling of Surasa: Hanuman’s wit against the Mother of Serpents.
 
 The Humbling of Varuna: Rama’s threat to dry the ocean with the Brahmastra.
 
 Kumbhakarna’s Boon: The linguistic slip that led to eternal sleep.
 
-The Coronation of Vibhishana: Dharma prevailing over kinship.
+The Birth of Ravana: The austerities of Vishrava’s sons.
+
+The Origin of the Rakshasas: The lineage of Heti, Praheti, and Malyavan.
+
+The Lifting of Mount Kailash: Ravana’s attempt to move the abode of Shiva.
+
+The Humbling of Ravana by King Kartavirya Arjuna: The thousand-armed king's victory.
+
+The Imprisonment of Ravana by Vali: Bound by a monkey's tail.
+
+The Story of King Ila: The transformation between genders and the origin of the Lunar dynasty.
+
 
 ## From the Mahabharata (Vyasa)
+
+The Swayamvara of Draupadi: The piercing of the target and the unintended command of Kunti.
+
+The Architecture of Maya Sabha: The building of the celestial hall of illusions.
+
+The Tapas of Arjuna: Seeking the Pashupata Astra from Lord Shiva (Kirata-Arjuna dialogue).
+
+The Tale of King Yayati: The exchange of youth for old age with his son Puru.
+
+The Nahusha-Yudhishthira Dialogue: A king turned into a serpent discussing the nature of a true Brahmin.
+
+The Durvasa Test: How Krishna saved the Pandavas from the sage's hunger-induced wrath.
+
+The Gogo-Vigraha (Cattle Drive): Arjuna (as Brihannala) defeating the entire Kuru army alone.
+
+The Legend of Amba/Shikhandi: The tale of vengeance spanning two lifetimes.
+
+The Abhimanyu Vyuha: The tragic entry into the Chakravyuha.
+
+The Karna-Shalya Dialogue: The psychological warfare between the charioteer and the warrior.
+
+The Brahmastra Duel: The confrontation between Arjuna and Ashwatthama’s ultimate weapons.
+
+The Revival of Parikshit: Krishna entering the womb to save the last heir of the Pandavas.
+
 The Tale of Shakuntala and Dushyanta: The ancestral roots of the Bharata lineage.
 
 The Vow of Bhishma: Devavrata’s supreme sacrifice for his father’s happiness.
@@ -66,8 +120,6 @@ The Jalandhara-Vrinda Saga: The power of chastity and the birth of the Tulsi pla
 The Narasimha Manifestation: The pillar, the twilight, and the protection of Prahlada.
 
 The Vamana Steps: Humbling King Bali and measuring the three worlds.
-
-The Ganesha-Kartikeya Race: The definition of "The World" (Parents vs. Universe).
 
 The Sati Atma-Daha: The sacrifice at Daksha’s Yagya.
 
