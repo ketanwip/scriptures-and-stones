@@ -1,0 +1,47 @@
+The palace of Hiranyakashipu had no shadows at noon—an architectural achievement born from the king's obsession with controlling light itself. Seven hundred pillars of polished diorite stood in the throne room, each one aligned to the cardinal directions with such precision that sunlight never pooled in corners, never created the ambiguity of dusk within his domain. The Asura king had spent fourteen thousand years in tapas—austerities so extreme that his body had calcified into living rock—to earn a boon from Brahma that he believed made him invincible. The terms were specific: he could not be killed by man or beast, god or demon, inside or outside, by day or night, on earth or in sky, with weapon or hand. It was a boon that seemed to account for every variable in the cosmic equation.
+
+His son, Prahlada, was the anomaly he had not anticipated.
+
+The boy was seven years old and already spoke with the vocabulary of a *rishi* who had spent lifetimes in meditation. Hiranyakashipu had sent him to the *gurukula* of Shanda and Amarka—two Asura preceptors known for their rigorous conditioning of young minds into the doctrines of *adharma*. But when Prahlada returned, he did not speak of conquest or power. He spoke of Vishnu. Not the Vishnu of distant mythology, but the Narayana who pervaded every atom, who dwelt in the pillar and the blade of grass, in the ocean and the dewdrop. The king's physicians examined the boy for possession. The royal astrologers checked his birth chart for malefic conjunctions. The priests performed purification rites using *panchagavya*—the five sacred products of the cow. Nothing changed. Prahlada's devotion was not a contamination that could be washed away. It was fundamental to his structure.
+
+"Where is this Vishnu of yours?" Hiranyakashipu's voice echoed through the hall, amplified by the acoustic design of the vaulted ceiling. "Show him to me. Is he in this pillar?" The king's hand, heavy with rings forged from the bones of defeated *devas*, struck the nearest column. The sound reverberated like a war drum. "Is he hiding in the walls? In the throne? In your pathetic, weak heart?"
+
+Prahlada stood twelve paces from his father, his spine straight despite the heat radiating from the Asura king's body—a furnace of barely contained rage. "He is everywhere, Father. In that pillar, yes. In the throne. In you, though you deny him. In me, because I accept him."
+
+The boy's tranquility was unbearable. Hiranyakashipu had subjugated kingdoms, incinerated sages, held Indra's throat in his grip until the king of heaven begged for mercy. Yet this child—his own blood—remained unmoved, unafraid. The king drew his sword, *Vidyujjihva* (Tongue of Lightning), a blade that had tasted the ichor of *gandharvas* and the marrow of celestial warriors. "Then let him save you."
+
+He raised the weapon above the boy's head. The courtiers held their breath. The priests stopped their mantras mid-syllable. Time, for a moment, seemed to perform a kind of triage—deciding which thread to sever, which pattern to preserve.
+
+And then the pillar split.
+
+Not cracked. Not fractured. *Split*—as though the diorite had been holding something compressed, something that had been waiting in a state of potential. The sound was not an explosion but a low, subsonic roar that made the ribcage resonate, the kind of frequency felt in bone marrow before it reached the ears. The light that emerged was neither solar nor lunar. It was *sandhya-prakasha*—the ambiguous illumination of twilight, the photons that exist between categories.
+
+What stepped forth defied taxonomy.
+
+The face was that of a lion—*Simha*—but not the lions that roamed the *dandaka* forests or the Gir ranges. This was the *ur-lion*, the platonic form from which all feline predators descended. The mane was not hair but something closer to *agni*—fire that had gained texture, each strand a filament of condensed *tejas* (brilliance). The eyes were golden, but not with the passive reflection of metal; they glowed with an internal luminescence, pupils vertical and fathomless. The body below the leonine head was humanoid—muscled with the definition of a warrior who had trained in every *akhada* (wrestling arena) across every *kalpa* (cosmic cycle). The hands ended in claws that were neither keratin nor metal—something in between, substances that matter itself bent around rather than resisted.
+
+Hiranyakashipu understood immediately what he was seeing. This was *Narasimha*—*Nara* (man) and *Simha* (lion), the form that existed in the definitional cracks of his boon. Not man, not beast, but both and neither. The throne room's architecture, designed to eliminate twilight, now became irrelevant—because twilight had manifested as a *being*, not a time of day.
+
+The Asura king charged. To his credit, he did not hesitate. Fourteen millennia of penance had not been wasted on a coward. He swung *Vidyujjihva* in an arc calculated to sever the spinal column at the C5 vertebra—a cut designed to paralyze before death. The blade met Narasimha's forearm and *stopped*. Not deflected, not blocked with another weapon, but halted as though it had struck an event horizon where kinetic energy simply ceased to apply.
+
+The return blow was surgical. Narasimha's claws caught Hiranyakashipu beneath the ribs, hooked into the intercostal spaces, and *lifted*. The king, who had never been moved against his will, found himself airborne. Then he was on the threshold—not inside the palace, not outside, but *on the doorstep*, that liminal space his boon had not accounted for. The time was *sandhya*, twilight, neither day nor night. The weapon was not iron or divine *astra*, but the claws that were part of the Avatar's body, neither weapon nor hand.
+
+Narasimha sat—a motion that somehow conveyed both the patience of a predator and the formality of a king assuming his throne—and placed Hiranyakashipu across his lap. The Asura's face still held defiance, but beneath it, a new understanding began to surface. The boon from Brahma had been perfect in its wording. Narayana's manifestation had been more perfect in its logic.
+
+The disembowelment was not frenzied. Each motion was deliberate, almost ritualistic. The claws entered the abdominal cavity with the precision of a surgeon who had performed this operation across countless incarnations. The intestines unspooled like rope, the liver came free with a wet sound that echoed in the acoustically perfect hall, the heart—still beating—was held aloft for a moment before being crushed. Hiranyakashipu's blood, dark with the residue of *amrita* he had once stolen from the *devas*, pooled on the threshold, neither inside nor outside, sanctifying the liminal space.
+
+When the body ceased its twitching, Narasimha remained seated. The rage had not dissipated—it radiated from him in waves of heat that made the air shimmer, a *shakti* so concentrated that it began to warp the geometry of the throne room. The courtiers fled. The guards dropped their spears. Even Brahma, watching from his celestial vimana, felt a moment of doubt about the wisdom of allowing such a manifestation to persist in the material plane.
+
+Only Prahlada approached.
+
+The boy walked through the heat without flinching, his small feet making no sound on the blood-slicked marble. He did not speak. He simply reached out and placed his hand—palm no larger than a lotus leaf—on the Avatar's knee. The heat began to recede. The vertical pupils softened. The mane of fire dimmed to something closer to ordinary light.
+
+"Enough," Prahlada whispered. Not a command, but a recognition. "He is gone. The *dharma* is restored. You can rest now."
+
+Narasimha's gaze lowered to the child. For a moment, something passed between them—an understanding beyond *bhakti* (devotion), beyond *prema* (divine love), something closer to recognition between aspects of the same infinite consciousness. The boy who had held *Narayana* in his heart. The Avatar who had manifested to protect that holding.
+
+The form did not vanish immediately. It took time—*sandhya* time, twilight time—for the paradox to retract back into potentiality. The man-lion, having served its function in the cosmic equilibrium, began to blur at the edges. The throne room's shadows, absent at noon, returned gradually as the light normalized. By the time the sun properly set, only Prahlada remained, sitting where the Avatar had sat, covered in his father's blood but unmarked, untouched.
+
+In later tellings, *Bhagavata Purana* would devote entire chapters to the theological implications of this manifestation. The *Narasimha Tapani Upanishad* would codify it as one of the primary meditations on the nature of divine intervention. But those who were present in the throne room on that twilight hour understood it more simply: a boon, no matter how carefully worded, cannot account for the infinite. And devotion, no matter how small its vessel, can summon that infinite into the narrowest of forms.
+
+Prahlada would go on to become king, to rule with such justice that even the *devas* took counsel from his judgments. But he never sat on the throne of Hiranyakashipu. That seat, and the threshold where his father had been torn open, remained empty—a memorial not to an Asura's ambition, but to the moment when categories themselves had proven insufficient to contain the will of *Vishnu*.
